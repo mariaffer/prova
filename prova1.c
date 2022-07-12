@@ -1,21 +1,27 @@
-#include <stdio.h>
-
+#include<stdio.h>
+#include <locale.h>
 int main()
 {
+    setlocale(LC_ALL,"");
+    int valor, indice=13 , soma=0 , tot , resp;
 
-     int indice=13;
-     int soma=0;
-     int val=0;
+    printf("digite o valor:");
+    scanf("%d",&valor);
 
-    printf("digite o valor: ");
-    scanf("%f",&val);
+      if(valor<indice)
+    {
+        soma++;
+        tot=soma+valor;
+        printf("o valor é menor que o indice: %d",tot);
+    }
+    else
 
-    if(val<13){
-        val=val+1;
-        soma=soma+val;
+    {
+        soma++;
+        tot=soma+valor;
+        printf("o valor é maior que o indice:%d/n",tot);
+    }
 
-     }
-     printf("valor:%d",soma);
 
 
     return 0;
